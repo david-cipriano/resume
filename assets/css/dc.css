@@ -8544,6 +8544,10 @@ textarea.form-control-lg {
   background-color: #052c67 !important;
 }
 
+html[data-darkreader-scheme="dark"] .bg-secondary {
+  background-color: #023475 !important;
+}
+
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
@@ -11748,6 +11752,10 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 
 .theme-progress-bar-dark {
   background-color: #031c41;
+}
+
+html[data-darkreader-scheme="dark"] .theme-progress-bar-dark {
+  background-color: #3188cc !important;
 }
 
 .resume-wrapper {
