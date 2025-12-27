@@ -15,15 +15,14 @@
     
     <!-- FontAwesome JS-->
 	<script defer src="assets/js/all.min.js"></script>
-       
-    <!-- Theme CSS -->  
+
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/dc.css">
 </head> 
 
 <body>	
-
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
+	<article class="resume-wrapper text-center position-relative">
+		<div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 		    <header class="resume-header pt-4 pt-md-0">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
@@ -46,6 +45,10 @@
 					                <li class="mb-3"><a class="text-link" target="_blank" href="https://github.com/david-cipriano"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/david-cipriano</a></li>
 					                <li class="mb-3"><a class="text-link" target="_blank" href="http://www.alfaromeobr.com.br"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span>alfaromeobr.com.br</a></li>
 							    </ul>
+								<div class="form-check form-switch" style="margin-top:30px;margin-left:15px;">
+									<input class="form-check-input" type="checkbox" id="flexSwitchDarkMode" onChange="SetDarkMode();">
+									<label id="labelDarkMode" onClick="SetDarkMode();">Dark mode</label>
+								</div>
 						    </div><!--//secondary-info-->
 					    </div><!--//row-->
 					    
@@ -505,5 +508,17 @@
 		    </div><!--//resume-body-->
 	    </div>
     </article> 
+
+	<!-- Template Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/darkreader.js"></script>
+	<script>
+			let enabled = localStorage.getItem('dc-dark-mode');
+			if (enabled === 'true')
+			{
+				EnableDarkMode();
+				document.getElementById('flexSwitchDarkMode').checked = true;
+			}
+	</script>
 </body>
 </html>
